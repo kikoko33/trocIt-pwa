@@ -10,12 +10,16 @@ import { UserService } from './services/user-service';
 import { UserListComponent } from './user-list/user-list.component';
 import { SignUpComponent } from './pages/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddItemComponent } from './pages/add-item/add-item.component';
+import { GiveListComponent } from './give-list/give-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    SignUpComponent
+    SignUpComponent,
+    AddItemComponent,
+    GiveListComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,9 @@ import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/fo
 import { Router, ActivatedRoute } from '@angular/router';
 import { Usr } from 'src/app/models/usr';
 import { UserService } from 'src/app/services/user-service';
+import { GiveList } from 'src/app/models/give-list';
+import { Item } from 'src/app/models/item';
+import { GiveListService } from 'src/app/services/give-list.service';
 
 @Component({
   selector: 'app-signup',
@@ -17,6 +20,7 @@ export class SignUpComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
+    private giveListService: GiveListService,
     private route: ActivatedRoute,
     private router: Router
   ) {  }
@@ -93,6 +97,9 @@ export class SignUpComponent implements OnInit {
     this.usr._email = this.email.value;
     this.usr._phone = this.phone.value;
     this.usr._town = this.town.value;
+    /*this.usr._givelist = new GiveList();
+    this.usr._likedItems = new Array<Item>();
+    */
 
     this.userService.save(this.usr)
     .subscribe(

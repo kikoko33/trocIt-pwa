@@ -3,34 +3,34 @@ import { Item } from './item';
 
 export class GiveList {
 
-  private _glId: number;
+  private id: number;
 
-  public get glId(): number {
-    return this._glId;
+  public get _id(): number {
+    return this.id;
   }
 
-  public set glId(value: number) {
-    this._glId = value;
+  public set _id(value: number) {
+    this.id = value;
   }
 
-  private _owner: Usr;
+  private owner: Usr;
 
-  public get owner(): Usr {
-    return this._owner;
+  public get _owner(): Usr {
+    return this.owner;
   }
 
-  public set owner(value: Usr) {
-    this._owner = value;
+  public set _owner(value: Usr) {
+    this.owner = value;
   }
 
-  private _usrItems: Array<Item>;
+  private usrItems: Array<Item>;
 
-  public get usrItems(): Array<Item> {
-    return this._usrItems;
+  public get _usrItems(): Array<Item> {
+    return this.usrItems;
   }
 
-  public set usrItems(value: Array<Item>) {
-    this._usrItems = value;
+  public set _usrItems(value: Array<Item>) {
+    this.usrItems = value;
   }
 
 }

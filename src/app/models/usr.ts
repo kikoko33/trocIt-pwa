@@ -3,14 +3,14 @@ import { Item } from './item';
 
 export class Usr {
 
-  private usrId: number;
+  private id: number;
 
-  public get _usrId(): number {
-    return this.usrId;
+  public get _id(): number {
+    return this.id;
   }
 
-  public set _usrId(value: number) {
-    this.usrId = value;
+  public set _id(value: number) {
+    this.id = value;
   }
 
   private username: string;

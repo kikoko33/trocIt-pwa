@@ -20,4 +20,16 @@ export class UserListComponent implements OnInit {
     });
   }
 
+  public remove(id: number) {
+    console.log(id);
+    this.userService.delete(id).subscribe(
+      res => {
+        console.log(res); // Get the ID from backend...
+        this.ngOnInit();
+      },
+      err => {
+        console.log('Error occured');
+      }
+    );
+  }
 }

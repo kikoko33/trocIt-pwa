@@ -14,8 +14,15 @@
           <td>{{ usr.id }}</td>
           <td>{{ usr.username }}</td>
           <td>{{ usr.password }}</td>
+          <td>
+            <button id='remove' (click)="remove(usr.id)">
+              X
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+
+<a routerLink="/items" class="btn btn-info">Items de Joris</a>

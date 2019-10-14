@@ -3,54 +3,64 @@ import { Usr } from './usr';
 
 export class Item {
 
-  private _title: string;
+  private id: number;
 
-  public get title(): string {
-    return this._title;
+  public get _id(): number {
+    return this.id;
   }
 
-  public set title(value: string) {
-    this._title = value;
+  public set _id(value: number) {
+    this.id = value;
   }
 
-  private _photo: string;
+  private title: string;
 
-  public get photo(): string {
-    return this._photo;
+  public get _title(): string {
+    return this.title;
   }
 
-  public set photo(value: string) {
-    this._photo = value;
+  public set _title(value: string) {
+    this.title = value;
   }
 
-  private _description: string;
+  private photo: string;
 
-  public get description(): string {
-    return this._description;
+  public get _photo(): string {
+    return this.photo;
   }
 
-  public set description(value: string) {
-    this._description = value;
+  public set _photo(value: string) {
+    this.photo = value;
   }
 
-  private _giveList: GiveList;
+  private description: string;
 
-  public get giveList(): GiveList {
-    return this._giveList;
+  public get _description(): string {
+    return this.description;
   }
 
-  public set giveList(value: GiveList) {
-    this._giveList = value;
+  public set _description(value: string) {
+    this.description = value;
   }
 
-  private _likers: Array<Usr>;
+  private giveList: GiveList;
 
-  public get likers(): Array<Usr> {
-    return this._likers;
+  public get _giveList(): GiveList {
+    return this.giveList;
   }
 
-  public set likers(value: Array<Usr>) {
-    this._likers = value;
+  public set _giveList(value: GiveList) {
+    this.giveList = value;
+  }
+
+  private likers: Array<Usr>;
+
+  public get _likers(): Array<Usr> {
+    return this.likers;
+  }
+
+  public set _likers(value: Array<Usr>) {
+    this.likers = value;
   }
 
 }

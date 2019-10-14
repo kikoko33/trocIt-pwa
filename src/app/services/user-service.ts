@@ -12,7 +12,7 @@ export class UserService {
   private usersUrl: string;
 
   constructor(private http: HttpClient) {
-    this.usersUrl = 'http://localhost:8080/users';
+    this.usersUrl = 'http://localhost:8080/users/';
   }
 
   public findAll(): Observable<Usr[]> {
@@ -24,5 +24,11 @@ export class UserService {
     console.log('Coucou cest le service ' + usr._username);
 
     return this.http.post<Usr>(this.usersUrl, usr);
+  }
+
+  public delete(id: number) {
+    console.log('ça dégage !');
+    console.log(this.usersUrl + id);
+    return this.http.delete(this.usersUrl + id);
   }
 }
