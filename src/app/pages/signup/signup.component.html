@@ -1,0 +1,61 @@
+<form [formGroup]='userForm'>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="username"
+      formControlName="username"
+      placeholder=" Username"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="password"
+      formControlName="password"
+      placeholder=" Password"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="avatar"
+      formControlName="avatar"
+      placeholder=" Avatar"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="email"
+      formControlName="email"
+      placeholder=" Email"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="phone"
+      formControlName="phone"
+      placeholder=" Phone"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="town"
+      formControlName="town"
+      placeholder=" Town"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <button id='add' (click)="submit()" [disabled]="userForm.invalid">
+    Ajouter
+    </button>
+  </div>
+</form>

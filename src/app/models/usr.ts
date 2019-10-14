@@ -3,93 +3,98 @@ import { Item } from './item';
 
 export class Usr {
 
-  private _usrId: number;
+  private usrId: number;
 
-  public get usrId(): number {
-    return this._usrId;
+  public get _usrId(): number {
+    return this.usrId;
   }
 
-  public set usrId(value: number) {
-    this._usrId = value;
+  public set _usrId(value: number) {
+    this.usrId = value;
   }
 
-  private _username: string;
+  private username: string;
 
-  public get username(): string {
-    return this._username;
+  public get _username(): string {
+    return this.username;
   }
 
-  public set username(value: string) {
-    this._username = value;
+  public set _username(value: string) {
+    this.username = value;
   }
 
-  private _password: string;
+  private password: string;
 
-  public get password(): string {
-    return this._password;
+  public get _password(): string {
+    return this.password;
   }
 
-  public set password(value: string) {
-    this._password = value;
+  public set _password(value: string) {
+    this.password = value;
   }
 
-  private _avatar: string;
+  private avatar: string;
 
-  public get avatar(): string {
-    return this._avatar;
+  public get _avatar(): string {
+    return this.avatar;
   }
 
-  public set avatar(value: string) {
-    this._avatar = value;
+  public set _avatar(value: string) {
+    this.avatar = value;
   }
 
-  private _email: string;
+  private email: string;
 
-  public get email(): string {
-    return this._email;
+  public get _email(): string {
+    return this.email;
   }
 
-  public set email(value: string) {
-    this._email = value;
+  public set _email(value: string) {
+    this.email = value;
   }
 
-  private _phone: string;
+  private phone: string;
 
-  public get phone(): string {
-    return this._phone;
+  public get _phone(): string {
+    return this.phone;
   }
 
-  public set phone(value: string) {
-    this._phone = value;
+  public set _phone(value: string) {
+    this.phone = value;
   }
 
-  private _town: string;
+  private town: string;
 
-  public get town(): string {
-    return this._town;
+  public get _town(): string {
+    return this.town;
   }
 
-  public set town(value: string) {
-    this._town = value;
+  public set _town(value: string) {
+    this.town = value;
   }
 
-  private _givelist: GiveList;
+  private givelist: GiveList;
 
-  public get givelist(): GiveList {
-    return this._givelist;
+  public get _givelist(): GiveList {
+    return this.givelist;
   }
 
-  public set givelist(value: GiveList) {
-    this._givelist = value;
+  public set _givelist(value: GiveList) {
+    this.givelist = value;
   }
 
-  private _likedItems: Array<Item>;
+  private likedItems: Array<Item>;
 
-  public get likedItems(): Array<Item> {
-    return this._likedItems;
+  public get _likedItems(): Array<Item> {
+    return this.likedItems;
   }
 
-  public set likedItems(value: Array<Item>) {
-    this._likedItems = value;
+  public set _likedItems(value: Array<Item>) {
+    this.likedItems = value;
+  }
+
+  public deserialize(datas: any): Usr {
+    Object.assign(this, datas);
+    return this;
   }
 }
