@@ -1,0 +1,25 @@
+<form [formGroup]='loginForm'>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="username"
+      formControlName="username"
+      placeholder=" Username"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="password"
+      formControlName="password"
+      placeholder=" Password"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <button id='login' (click)="submit()" [disabled]="userForm.invalid">
+    Log In
+    </button>
+  </div>
+</form>

@@ -12,6 +12,7 @@ import { SignUpComponent } from './pages/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddItemComponent } from './pages/add-item/add-item.component';
 import { GiveListComponent } from './give-list/give-list.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GiveListComponent } from './give-list/give-list.component';
     UserListComponent,
     SignUpComponent,
     AddItemComponent,
-    GiveListComponent
+    GiveListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
