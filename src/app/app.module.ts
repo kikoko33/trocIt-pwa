@@ -11,6 +11,8 @@ import { UserListComponent } from './user-list/user-list.component';
 import { SignUpComponent } from './pages/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { AlertModule, BsDropdownModule, ModalModule } from 'ngx-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AlertModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
