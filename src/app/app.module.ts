@@ -14,6 +14,7 @@ import { AddItemComponent } from './pages/add-item/add-item.component';
 import { GiveListComponent } from './give-list/give-list.component';
 
 import { AlertModule, BsDropdownModule, ModalModule } from 'ngx-bootstrap';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AlertModule, BsDropdownModule, ModalModule } from 'ngx-bootstrap';
     UserListComponent,
     SignUpComponent,
     AddItemComponent,
-    GiveListComponent
+    GiveListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
