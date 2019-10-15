@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AddItemComponent } from './pages/add-item/add-item.component';
 import { GiveListComponent } from './give-list/give-list.component';
 
+import { AlertModule, BsDropdownModule, ModalModule } from 'ngx-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,10 @@ import { GiveListComponent } from './give-list/give-list.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AlertModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
