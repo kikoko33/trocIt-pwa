@@ -4,7 +4,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { SignUpComponent } from './pages/signup/signup.component';
 import { AddItemComponent } from './pages/add-item/add-item.component';
 import { GiveListComponent } from './give-list/give-list.component';
-import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 const routes: Routes = [
@@ -16,6 +16,9 @@ const routes: Routes = [
   },
   {
     path: 'signup', component: SignUpComponent
+  },
+  {
+    path: 'login', component: LoginComponent
   },
   {
     path: 'additem', component: AddItemComponent

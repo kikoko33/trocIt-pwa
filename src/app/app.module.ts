@@ -12,6 +12,7 @@ import { SignUpComponent } from './pages/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddItemComponent } from './pages/add-item/add-item.component';
 import { GiveListComponent } from './give-list/give-list.component';
+import { LoginComponent } from './pages/login/login.component';
 
 import { AlertModule, BsDropdownModule, ModalModule } from 'ngx-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
@@ -23,7 +24,7 @@ import { HomeComponent } from './pages/home/home.component';
     SignUpComponent,
     AddItemComponent,
     GiveListComponent,
-    HomeComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
