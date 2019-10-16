@@ -11,7 +11,7 @@ export class ItemService {
   private itemsUrl: string;
 
   constructor(private http: HttpClient) {
-    this.itemsUrl = 'http://localhost:8080/users/61/items/';
+    this.itemsUrl = 'http://localhost:8080/users/' + localStorage.getItem('currentUsr') + '/items/';
   }
 
   public findAll(): Observable<Item[]> {
