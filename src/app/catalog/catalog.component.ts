@@ -23,7 +23,16 @@ export class CatalogComponent implements OnInit {
     console.log(id);
     this.iServ.like(id).subscribe(
       res => {
-        console.log(res); // Get the ID from backend...
+        console.log(res); // Get the item ID from backend...
+      },
+      err => {
+        console.log('Error occured');
+      }
+    );
+
+    this.iServ.isMatch(id).subscribe(
+      res => {
+        console.log(res); // Get the Boolean from backend...
       },
       err => {
         console.log('Error occured');
