@@ -24,7 +24,8 @@ import { HomeComponent } from './pages/home/home.component';
     SignUpComponent,
     AddItemComponent,
     GiveListComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
