@@ -1,0 +1,35 @@
+<p>update-item works!</p>
+<form [formGroup]='itemForm'>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="title"
+      formControlName="title"
+      placeholder=""
+    >
+  </div>
+  <br>
+  <div class="photo">
+    <input
+      type="text"
+      id="photo"
+      formControlName="photo"
+      placeholder=""
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="description"
+      formControlName="description"
+      placeholder=""
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <button id='add' (click)="submit()" [disabled]="itemForm.invalid">
+    Ajouter
+    </button>
+  </div>
+</form>

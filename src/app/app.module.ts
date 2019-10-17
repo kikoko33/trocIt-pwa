@@ -16,6 +16,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ItemService } from './services/item.service';
 import { WorldItemsService } from './services/world-items.service';
+import { UpdateItemComponent } from './pages/update-item/update-item.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { WorldItemsService } from './services/world-items.service';
     AddItemComponent,
     GiveListComponent,
     LoginComponent,
-    CatalogComponent
+    CatalogComponent,
+    UpdateItemComponent
   ],
   imports: [
     BrowserModule,
