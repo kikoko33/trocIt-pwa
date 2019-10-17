@@ -5,6 +5,7 @@ import { SignUpComponent } from './pages/signup/signup.component';
 import { AddItemComponent } from './pages/add-item/add-item.component';
 import { GiveListComponent } from './give-list/give-list.component';
 import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 const routes: Routes = [

@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Usr } from 'src/app/models/usr';
-import { UserService } from 'src/app/services/user-service';
-import { GiveList } from 'src/app/models/give-list';
-import { Item } from 'src/app/models/item';
-import { GiveListService } from 'src/app/services/give-list.service';
+import { Usr } from '../../models/usr';
+import { UserService } from '../../services/user-service';
 
 @Component({
   selector: 'app-signup',
@@ -20,7 +17,6 @@ export class SignUpComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
-    private giveListService: GiveListService,
     private route: ActivatedRoute,
     private router: Router
   ) {  }
