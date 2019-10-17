@@ -8,6 +8,7 @@
     >
   </div>
   <br>
+  <!--
   <div class="photo">
     <input
       type="text"
@@ -15,6 +16,15 @@
       formControlName="photo"
       placeholder=" Photo"
     >
+  </div>
+  <br>
+  -->
+  <div class="formGroup">
+    <input
+      type="file"
+      id="photo"
+      formControlName="photo"
+      (change)="onFileSelect($event)" />
   </div>
   <br>
   <div class="formGroup">
