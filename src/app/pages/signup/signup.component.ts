@@ -1,8 +1,8 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Usr } from 'src/app/models/usr';
-import { UserService } from 'src/app/services/user-service';
+import { Usr } from '/app/models/usr';
+import { UserService } from 'app/services/user-service';
 
 @Component({
   selector: 'app-signup',
