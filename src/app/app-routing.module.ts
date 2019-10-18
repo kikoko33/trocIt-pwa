@@ -6,6 +6,8 @@ import { AddItemComponent } from './pages/add-item/add-item.component';
 import { GiveListComponent } from './give-list/give-list.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import { CatalogComponent } from './catalog/catalog.component';
+import { UpdateItemComponent } from './pages/update-item/update-item.component';
 
 
 const routes: Routes = [
@@ -25,7 +27,13 @@ const routes: Routes = [
     path: 'additem', component: AddItemComponent
   },
   {
-    path: 'items', component: GiveListComponent
+    path: 'updateitem', component: UpdateItemComponent
+  },
+  {
+    path: 'items', component: CatalogComponent
+  },
+  {
+    path: 'myitems', component: GiveListComponent
   }
 ];
 

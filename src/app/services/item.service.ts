@@ -18,11 +18,28 @@ export class ItemService {
     return this.http.get<Item[]>(this.itemsUrl);
   }
 
+  public findById(id: number): Observable<Item> {
+    return this.http.get<Item>(this.itemsUrl + id);
+  }
+
   public save(item: Item) {
 
     console.log('Coucou cest le service ' + item._title);
 
     return this.http.post<Item>(this.itemsUrl, item);
+  }
+////////////////////////////////////////////////////////////////////////////////////////////////
+  public savePicture(newItem: FormData) {
+
+    return this.http.post<FormData>(this.itemsUrl, newItem);
+  }
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+  public update(item: Item) {
+
+    console.log('5 min mdr' + item._title);
+
+    return this.http.put<Item>(this.itemsUrl + item._id, item);
   }
 
   public delete(id: number) {
