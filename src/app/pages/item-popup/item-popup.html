@@ -1,6 +1,29 @@
+<div class="container">
 
-<!--
-<form [formGroup]='userForm'>
+    <!-- exemple de popup -->
+    <p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#id-popup">S'inscrire</button></p>
+
+
+    <!-- construction de la popup
+          data-backdrop="false" pour supprimer le voile au-dessus de la popup
+          data-keyboard="false" pour supprimer la touche Echap -->
+    <div class="modal fade" id="id-popup" tabindex="-1" role="dialog" aria-labelledby="titrePopUp" aria-hidden="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+
+          <!-- le titre de la popup -->
+          <div class="modal-header">
+          <h4 class="modal-title" id="titrePopUp">Rejoindre la communauté (de l'anneau)
+          <!-- la croix de fermeture de la popup -->
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> </h4>
+          </div>
+
+          <!-- le contenu HTML de la popup -->
+          <div class="modal-body">
+
+         <form [formGroup]='userForm' style="margin:auto; display:block; text-align:center">
   <div class="formGroup">
     <input
       type="text"
@@ -21,10 +44,11 @@
   <br>
   <div class="formGroup">
     <input
-      type="file"
+      type="text"
       id="avatar"
       formControlName="avatar"
-      (change)="onFileSelect($event)" />
+      placeholder=" Avatar"
+    >
   </div>
   <br>
   <div class="formGroup">
@@ -54,100 +78,13 @@
     >
   </div>
   <br>
-  <div class="formGroup">
-    <button id='add' (click)="submit()" [disabled]="userForm.invalid">
-    Ajouter
-    </button>
-  </div>
-</form> -->
-
-<div class="container">
-
-    <!-- exemple de popup -->
-    <p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#id-popup">S'inscrire</button></p>
-
-
-    <!-- construction de la popup
-          data-backdrop="false" pour supprimer le voile au-dessus de la popup
-          data-keyboard="false" pour supprimer la touche Echap -->
-    <div class="modal fade" id="id-popup" tabindex="-1" role="dialog" aria-labelledby="titrePopUp" aria-hidden="true">
-
-      <div class="modal-dialog">
-
-        <div class="modal-content">
-
-          <!-- le titre de la popup -->
-          <div class="modal-header">
-          <h4 class="modal-title" id="titrePopUp">Rejoindre la communauté
-          <!-- la croix de fermeture de la popup -->
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> </h4>
-          </div>
-
-          <!-- le contenu HTML de la popup -->
-          <div class="modal-body">
-
-         <form [formGroup]='userForm' style="margin:auto; display:block; text-align:center">
-  <div class="formGroup">
-    <input
-      type="text"
-      id="username"
-      formControlName="username"
-      placeholder=" Pseudo"
-    >
-  </div>
-  <br>
-  <div class="formGroup">
-    <input
-      type="text"
-      id="password"
-      formControlName="password"
-      placeholder=" Mot de passe"
-    >
-  </div>
-  <br>
-  <div class="formGroup">
-    <input
-      type="text"
-      id="avatar"
-      formControlName="avatar"
-      placeholder=" Avatar"
-    >
-  </div>
-  <br>
-  <div class="formGroup">
-    <input
-      type="text"
-      id="email"
-      formControlName="email"
-      placeholder=" Email"
-    >
-  </div>
-  <br>
-  <div class="formGroup">
-    <input
-      type="text"
-      id="phone"
-      formControlName="phone"
-      placeholder=" Telephone"
-    >
-  </div>
-  <br>
-  <div class="formGroup">
-    <input
-      type="text"
-      id="town"
-      formControlName="town"
-      placeholder=" Ville"
-    >
-  </div>
-  <br>
 </form>
 
           </div>
 
           <!-- le pied de page de la popup -->
           <div class="modal-footer">
-          <a href="" class="btn btn-primary" style="margin:auto;display:block">C'est parti !</a>
+          <a href="" class="btn btn-primary" style="margin:auto;display:block">Je like</a>
           </div>
 
         </div>
@@ -157,4 +94,3 @@
     </div>
 
 </div>
-

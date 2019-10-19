@@ -1,9 +1,44 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="./assets/logo2.png" alt="logo" style="width:100px; height:75%">
+  </a>
 
-<h1> Alors ça marche ou pas bordel???? Si oui doit apparaitre en rouge; sinon ---> Fuck</h1>
+  <!-- Links -->
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Mes Items</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Mes Likes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Mes notifs</a>
+    </li>
+</ul>
+     <!-- Dropdown -->
+    <ul class="nav navbar-nav navbar-right">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Mon profil
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+      </div>
+    </li>
+    </ul>
+
+</nav>
+
+<!--page d'accueil du site-->
+<h2>Les derniers items ajoutés</h2>
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-4">
-      <div class="card shadow" style="width: 20rem;">
+      <div class="card shadow">
         <div class="inner">
           <img class="card-img-top img-fluid"
             src="https://s1.qwant.com/thumbr/0x380/a/2/0bce66e9a330018ca49620331acd50b8c76a7e5a8685c35acfbbc93db158e0/Days-Gone-E3-Key-Art-051916-02.jpg?u=https%3A%2F%2Fbendstudio.com%2Fwp-content%2Fuploads%2F2016%2F06%2FDays-Gone-E3-Key-Art-051916-02.jpg&q=0&b=1&p=0&a=1"
@@ -11,8 +46,15 @@
         </div>
         <div class="card-body text-center">
           <h5 class="card-title">Day's Gone</h5>
-          <p class="card-text">jeu PS4 en bon état, échange contre un jeu de tir en TPS ou BD The Walking Dead.</p>
-          <a href="#" class="btn btn-primary">En savoir plus...</a>
+          <p class="card-text">jeu PS4 en bon état, échange contre un jeu de tir en TPS ou BD The Walking Dead.
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <a href="#" class="btn btn-dark">En savoir plus...</a>
+          <br>
+          <div class="card-footer">
+          <small class="text-muted"> Posté par (....)</small>
+          </div>
         </div>
       </div>
     </div>
@@ -36,11 +78,47 @@
         <div class="card-body text-center">
           <h5 class="card-title">Day's Gone</h5>
           <p class="card-text">jeu PS4 en bon état, échange contre un jeu de tir en TPS ou BD The Walking Dead.</p>
-          <a href="#" class="btn btn-primary">En savoir plus...</a>
+         <p><button class="btn btn-outline-primary btn-lg" data-toggle="modal fade" data-target="#id-popup" (click)="openModal(popup)">Know more</button></p>
         </div>
       </div>
     </div>
+
 
 
   </div>
 </div>
+
+<!-- Modal-->
+
+<div class="container">
+
+    <!-- construction de la popup-->
+
+<ng-template #popup>
+  <div class="modal-header">
+    <a href="#">Photo</a>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-title">
+    Title
+  </div>
+  <div class="modal-body">
+  Description
+  <lottie-player
+    src="https://assets8.lottiefiles.com/packages/lf20_9Jtvw4.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay >
+</lottie-player>
+  </div>
+  <div class="modal-footer">
+  Posté par (...)
+  </div>
+</ng-template>
+
+</div>
+
+
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+-->

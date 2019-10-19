@@ -26,6 +26,13 @@ export class UserService {
     return this.http.post<Usr>(this.usersUrl, usr);
   }
 
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  public savePicture(newUsr: FormData) {
+
+    return this.http.post<FormData>(this.usersUrl, newUsr);
+  }
+////////////////////////////////////////////////////////////////////////////////////////////////
+
   public delete(id: number) {
     console.log('ça dégage !');
     console.log(this.usersUrl + id);

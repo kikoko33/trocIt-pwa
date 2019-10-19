@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Item } from 'src/app/models/item';
@@ -13,11 +13,14 @@ export class AddItemComponent implements OnInit {
 
   public item: Item;
   public itemForm: FormGroup;
+  public selectedFile: File;
+  public categorySet: Array<string>;
 
   constructor(
     private formBuilder: FormBuilder,
     private itemService: ItemService,
-    private router: Router
+    private router: Router,
+    private cd: ChangeDetectorRef
   ) { }
 
   /***
@@ -35,8 +38,16 @@ public get description(): AbstractControl {
   return this.itemForm.controls.description;
 }
 
+/*
+public get categories(): AbstractControl {
+  return this.itemForm.controls.categories;
+}
+*/
+
   ngOnInit() {
     this.item = new Item();
+    this.categorySet = ['Book', 'Video Game', 'Board Game'];
+    console.log(this.categorySet);
     this._setForm();
   }
 
@@ -47,15 +58,65 @@ public get description(): AbstractControl {
         [Validators.required, Validators.minLength(3)]
       ],
       photo: [
-        ''
+        '',
+        Validators.required,
       ],
       description: [
         '',
         Validators.required,
       ]
+      /*
+      ,
+      categories: [
+        '',
+        Validators.required,
+      ]
+      */
     });
   }
 
+  onFileSelect(event) {
+    const reader = new FileReader();
+
+    if (event.target.files && event.target.files.length) {
+      this.selectedFile = event.target.files[0];
+      console.log(this.selectedFile);
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload = () => {
+        this.itemForm.patchValue({
+          file: this.selectedFile
+        });
+
+        // need to run CD since file load runs outside of zone
+        this.cd.markForCheck();
+      };
+    }
+  }
+////////////////////////////////////////////////////////////////////////////////
+
+  public submit() {
+    const newItem = new FormData();
+    newItem.append('title', this.title.value);
+    newItem.append('photo', this.selectedFile);
+    newItem.append('description', this.description.value);
+    /*
+    newItem.append('categories', this.categories.value);
+    */
+
+    this.itemService.savePicture(newItem)
+    .subscribe(
+      res => {
+        console.log(res);
+        this.gotoGiveList();
+      },
+      err => {
+        console.log('Error occured');
+      }
+    );
+  }
+
+////////////////////////////////////////////////////////////////////////////////
+/*
   public submit() {
     console.log('Yo... Datas are: ' + JSON.stringify(this.itemForm.value));
 
@@ -77,8 +138,10 @@ public get description(): AbstractControl {
     );
   }
 
+  */
+
   gotoGiveList() {
-    this.router.navigate(['/items']);
+    this.router.navigate(['/myitems']);
   }
 
 }

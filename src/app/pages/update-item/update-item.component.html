@@ -1,30 +1,21 @@
+<p>update-item works!</p>
 <form [formGroup]='itemForm'>
   <div class="formGroup">
     <input
       type="text"
       id="title"
       formControlName="title"
-      placeholder=" Title"
+      placeholder=""
     >
   </div>
   <br>
-  <!--
   <div class="photo">
     <input
       type="text"
       id="photo"
       formControlName="photo"
-      placeholder=" Photo"
+      placeholder=""
     >
-  </div>
-  <br>
-  -->
-  <div class="formGroup">
-    <input
-      type="file"
-      id="photo"
-      formControlName="photo"
-      (change)="onFileSelect($event)" />
   </div>
   <br>
   <div class="formGroup">
@@ -32,7 +23,7 @@
       type="text"
       id="description"
       formControlName="description"
-      placeholder=" Description"
+      placeholder=""
     >
   </div>
   <br>
