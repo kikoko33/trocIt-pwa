@@ -1,12 +1,16 @@
 
 <!-- Navbar when not connected-->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
     <img src="./assets/logo2.png" alt="logo" style="width:100px; height:75%">
   </a>
-
+<!-- bouton responsive-->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive">
+<span class="navbar-toggler-icon"></span>
+</button>
   <!-- Links -->
+  <div class="collapse navbar-collapse" id="responsive">
   <ul class="navbar-nav ml-auto">
     <li class="nav-item">
       <a class="nav-link" (click)="openModal(popupform)">S'inscrire</a>
@@ -15,6 +19,7 @@
       <a class="nav-link" (click)="openModal(popupform2)">Se connecter</a>
     </li>
 </ul>
+</div>
 </nav>
 
 
@@ -24,8 +29,12 @@
   <a class="navbar-brand" href="#">
     <img src="./assets/logo2.png" alt="logo" style="width:100px; height:75%">
   </a>
-
+<!-- bouton responsive-->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive">
+<span class="navbar-toggler-icon"></span>
+</button>
   <!-- Links -->
+  <div class="collapse navbar-collapse" id="responsive">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
       <a class="nav-link" href="#">Mes Items</a>
@@ -34,18 +43,18 @@
       <a class="nav-link" href="#">Mes Likes</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Mes notifs</a>
+      <a class="nav-link" href="./notification">Mes notifs</a>
     </li>
 </ul>
-     <!-- Dropdown -->
+
     <ul class="nav navbar-nav navbar-right">
-    <li class="nav-item dropdown">
+    <li class="nav-item">
       <a class="nav-link " href="#">
         Mon profil
       </a>
     </li>
     </ul>
-
+</div>
 </nav>
 
 <!--page d'accueil du site-->
@@ -53,8 +62,8 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-4 xs-5">
-      <div class="card shadow">
+    <div class="col-md-4 col-sm-7 col-mg-5">
+      <div class="card shadow" style="width: 20rem;">
         <div class="inner">
           <img class="card-img-top img-fluid"
             src="https://s1.qwant.com/thumbr/0x380/a/2/0bce66e9a330018ca49620331acd50b8c76a7e5a8685c35acfbbc93db158e0/Days-Gone-E3-Key-Art-051916-02.jpg?u=https%3A%2F%2Fbendstudio.com%2Fwp-content%2Fuploads%2F2016%2F06%2FDays-Gone-E3-Key-Art-051916-02.jpg&q=0&b=1&p=0&a=1"
@@ -74,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-7 col-mg-5">
       <div class="card shadow" style="width: 20rem;">
         <img class="card-img-top"
           src="https://s1.qwant.com/thumbr/0x380/a/2/0bce66e9a330018ca49620331acd50b8c76a7e5a8685c35acfbbc93db158e0/Days-Gone-E3-Key-Art-051916-02.jpg?u=https%3A%2F%2Fbendstudio.com%2Fwp-content%2Fuploads%2F2016%2F06%2FDays-Gone-E3-Key-Art-051916-02.jpg&q=0&b=1&p=0&a=1"
@@ -86,7 +95,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-7 col-mg-5">
       <div class="card shadow" style="width: 20rem;">
         <img class="card-img-top"
           src="https://s1.qwant.com/thumbr/0x380/a/2/0bce66e9a330018ca49620331acd50b8c76a7e5a8685c35acfbbc93db158e0/Days-Gone-E3-Key-Art-051916-02.jpg?u=https%3A%2F%2Fbendstudio.com%2Fwp-content%2Fuploads%2F2016%2F06%2FDays-Gone-E3-Key-Art-051916-02.jpg&q=0&b=1&p=0&a=1"

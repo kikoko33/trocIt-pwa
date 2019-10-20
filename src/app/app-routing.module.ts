@@ -8,11 +8,16 @@ import { LoginComponent } from './pages/login/login.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { UpdateItemComponent } from './pages/update-item/update-item.component';
 import { HomeComponent } from './pages/home/home.component';
+import { NotificationComponent } from './pages/notification/notification.component';
+
 
 
 const routes: Routes = [
   {
     path: '', component: HomeComponent, pathMatch: 'full'
+  },
+  {
+    path: 'notification', component: NotificationComponent, pathMatch: 'full'
   },
   {
     path: 'users', component: UserListComponent

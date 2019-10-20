@@ -20,6 +20,7 @@ import { UpdateItemComponent } from './pages/update-item/update-item.component';
 
 import { AlertModule, BsDropdownModule, ModalModule } from 'ngx-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
+import { NotificationComponent } from './pages/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HomeComponent } from './pages/home/home.component';
     LoginComponent,
     CatalogComponent,
     UpdateItemComponent,
-    HomeComponent
+    HomeComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,

@@ -6,10 +6,10 @@ h2 {
 
 // Navbar
 
-.navbar {
-margin-bottom: 2em;
-height: 4em;
-}
+//.navbar {
+//margin-bottom: 2em;
+//height: 4em;
+//}
 
 .nav-link {
   font-family: fantasy;
@@ -24,7 +24,6 @@ height: 4em;
   }
 }
 
-// Fin Navbar
 
 // Cards
 .btn-dark {
@@ -34,7 +33,7 @@ height: 4em;
 
 .container {
   margin-top: 2%;
-  padding: 20px 5px;
+  padding: 20px;
 }
 
 .inner {
@@ -53,12 +52,13 @@ height: 4em;
   margin-bottom: 2em;
 }
 
-  /**
-  * card design
-  **/
+
+  // card design
+
   div {
     &.card {
       height: 27em;
+
       p {
         &.card-text {
           height: 3em;
@@ -71,3 +71,6 @@ height: 4em;
     }
   }
 
+  #formGroup {
+border-radius: 2rem;
+  }
