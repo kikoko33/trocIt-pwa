@@ -1,5 +1,41 @@
-/*.formGroup {
-  border: 0;
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-}*/
+
+ng-template {
+  background-color: brown;
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: -webkit-box;
+
+  display: -webkit-flex;
+
+  display: -moz-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 15px;
+
+  border-radius: 15%;
+}
+
+
+
+form {
+  background-color: cornflowerblue;
+  box-sizing: border-box;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+}
+
+

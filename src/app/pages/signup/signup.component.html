@@ -1,6 +1,6 @@
 
-
-<!-- <form [formGroup]='userForm'>
+<!--
+<form [formGroup]='userForm'>
   <div class="formGroup">
     <input
       type="text"
@@ -59,34 +59,28 @@
     Ajouter
     </button>
   </div>
-</form>-->
+</form> -->
+
+
+
+
+
+<button class="btn btn-outline-primary btn-lg" (click)="openModal(popup)">S'inscrire</button>
+
 
 <div class="container">
 
-    <!-- exemple de popup -->
-    <p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#id-popup">S'inscrire</button></p>
+<ng-template #popup>
+  <div class="modal-header" class="text-center">
+  Inscription
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 
+    <div class="modal-body">
 
-    <!-- construction de la popup
-          data-backdrop="false" pour supprimer le voile au-dessus de la popup
-          data-keyboard="false" pour supprimer la touche Echap -->
-    <div class="modal fade" id="id-popup" tabindex="-1" role="dialog" aria-labelledby="titrePopUp" aria-hidden="true">
-
-      <div class="modal-dialog">
-
-        <div class="modal-content">
-
-          <!-- le titre de la popup -->
-          <div class="modal-header">
-          <h4 class="modal-title" id="titrePopUp">Rejoindre la communauté
-          <!-- la croix de fermeture de la popup -->
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> </h4>
-          </div>
-
-          <!-- le contenu HTML de la popup -->
-          <div class="modal-body">
-
-         <form [formGroup]='userForm' style="margin:auto; display:block; text-align:center">
+<form [formGroup]='userForm' style="margin:auto; display:block; text-align:center">
   <div class="formGroup">
     <input
       type="text"
@@ -143,17 +137,12 @@
   <br>
 </form>
 
-          </div>
+</div>
+  <div class="modal-footer">
+  <a href="" class="btn btn-primary" style="margin:auto;display:block">C'est parti !</a>
+  </div>
 
-          <!-- le pied de page de la popup -->
-          <div class="modal-footer">
-          <a href="" class="btn btn-primary" style="margin:auto;display:block">C'est parti !</a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+</ng-template>
 
 </div>
+

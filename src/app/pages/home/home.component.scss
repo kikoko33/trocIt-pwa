@@ -1,8 +1,43 @@
+h2 {
+  text-align: center;
+  color: aquamarine;
+  margin: auto;
+}
+
+// Navbar
+
+//.navbar {
+//margin-bottom: 2em;
+//height: 4em;
+//}
+
+.nav-link {
+  font-family: fantasy;
+}
 
 
+@media (min-width: 992px){
+  .navbar li {
+      margin-left : 1em;
+      margin-right : 1em;
+
+  }
+}
+
+
+// Cards
+.btn-dark {
+  color: aquamarine;
+  margin-bottom: 1em;
+}
+
+.card {
+  margin-bottom: 8%;
+}
 .container {
-  margin-top: 7%;
-  padding: 20px 5px;
+  margin-top: 2%;
+  padding: 20px;
+
 }
 
 .inner {
@@ -21,12 +56,13 @@
   margin-bottom: 2em;
 }
 
-  /**
-  * card design
-  **/
+
+  // card design
+
   div {
     &.card {
-      height: 29em;
+      height: 27em;
+
       p {
         &.card-text {
           height: 3em;
@@ -38,3 +74,5 @@
       }
     }
   }
+
+

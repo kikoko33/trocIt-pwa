@@ -20,6 +20,7 @@ import { UpdateItemComponent } from './pages/update-item/update-item.component';
 
 import { AlertModule, BsDropdownModule, ModalModule } from 'ngx-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
+import { NotificationComponent } from './pages/notification/notification.component';
 import { CatalogComponent } from './catalog/catalog.component';
 
 @NgModule({
@@ -30,9 +31,11 @@ import { CatalogComponent } from './catalog/catalog.component';
     AddItemComponent,
     GiveListComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
     CatalogComponent,
-    UpdateItemComponent
+    UpdateItemComponent,
+    HomeComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
@@ -41,8 +44,8 @@ import { CatalogComponent } from './catalog/catalog.component';
     ReactiveFormsModule,
     AlertModule.forRoot(),
     BsDropdownModule.forRoot(),
-    ModalModule.forRoot(),
-    CatalogComponent,
+    ModalModule.forRoot()
+
   ],
   providers: [UserService, ItemService, WorldItemsService],
   bootstrap: [AppComponent]
