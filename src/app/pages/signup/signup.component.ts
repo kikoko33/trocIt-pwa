@@ -1,8 +1,9 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, TemplateRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Usr } from '../../models/usr';
 import { UserService } from '../../services/user-service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 
 @Component({
@@ -15,14 +16,21 @@ export class SignUpComponent implements OnInit {
   public usr: Usr;
   public userForm: FormGroup;
   public selectedFile: File;
+  private modalRef: BsModalRef;
 
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
     private route: ActivatedRoute,
     private router: Router,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    private modalService: BsModalService
   ) {  }
+
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
 
   /***
    * Controls getter

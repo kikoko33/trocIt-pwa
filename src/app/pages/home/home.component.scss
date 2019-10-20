@@ -3,6 +3,7 @@ h2 {
   color: aquamarine;
   margin: auto;
 }
+
 // Navbar
 
 .navbar {
@@ -10,17 +11,22 @@ margin-bottom: 2em;
 height: 4em;
 }
 
+.nav-link {
+  font-family: fantasy;
+}
 
 
 @media (min-width: 992px){
   .navbar li {
       margin-left : 1em;
       margin-right : 1em;
+
   }
 }
 
 // Fin Navbar
 
+// Cards
 .btn-dark {
   color: aquamarine;
   margin-bottom: 1em;

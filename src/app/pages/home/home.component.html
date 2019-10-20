@@ -1,4 +1,24 @@
-<!-- Navbar -->
+
+<!-- Navbar when not connected-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="./assets/logo2.png" alt="logo" style="width:100px; height:75%">
+  </a>
+
+  <!-- Links -->
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" (click)="openModal(popupform)">S'inscrire</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="openModal(popupform2)">Se connecter</a>
+    </li>
+</ul>
+</nav>
+
+
+<!-- Navbar when connected-->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#">
@@ -20,13 +40,9 @@
      <!-- Dropdown -->
     <ul class="nav navbar-nav navbar-right">
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+      <a class="nav-link " href="#">
         Mon profil
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-      </div>
     </li>
     </ul>
 
@@ -37,7 +53,7 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-4">
+    <div class="col-md-4 xs-5">
       <div class="card shadow">
         <div class="inner">
           <img class="card-img-top img-fluid"
@@ -50,7 +66,7 @@
           aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
           aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
           aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <a href="#" class="btn btn-dark">En savoir plus...</a>
+          <button class="btn btn-dark btn-lg" (click)="openModal(popup)">En savoir plus...</button>
           <br>
           <div class="card-footer">
           <small class="text-muted"> Posté par (....)</small>
@@ -78,7 +94,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Day's Gone</h5>
           <p class="card-text">jeu PS4 en bon état, échange contre un jeu de tir en TPS ou BD The Walking Dead.</p>
-         <p><button class="btn btn-outline-primary btn-lg" data-toggle="modal fade" data-target="#id-popup" (click)="openModal(popup)">Know more</button></p>
+         <p><button class="btn btn-outline-primary btn-lg" (click)="openModal(popup)">Know more</button></p>
         </div>
       </div>
     </div>
@@ -92,23 +108,18 @@
 
 <div class="container">
 
-    <!-- construction de la popup-->
-
 <ng-template #popup>
   <div class="modal-header">
-    <a href="#">Photo</a>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  <div class="modal-title">
+  <div class="modal-title" class="text-center">
     Title
   </div>
-  <div class="modal-body">
+    <div class="modal-body">
   Description
-  <lottie-player
-    src="https://assets8.lottiefiles.com/packages/lf20_9Jtvw4.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay >
-</lottie-player>
+
   </div>
   <div class="modal-footer">
   Posté par (...)
@@ -117,8 +128,130 @@
 
 </div>
 
+<div class="container">
 
+<ng-template #popupform>
+  <div class="modal-header" class="text-center">
+  Nous rejoindre
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 
+    <div class="modal-body">
+
+<form [formGroup]='userForm' style="margin:auto; display:block; text-align:center">
+  <div class="formGroup">
+    <input
+      type="text"
+      id="username"
+      formControlName="username"
+      placeholder=" Pseudo"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="password"
+      formControlName="password"
+      placeholder=" Mot de passe"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="avatar"
+      formControlName="avatar"
+      placeholder=" Avatar"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="email"
+      formControlName="email"
+      placeholder=" Email"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="phone"
+      formControlName="phone"
+      placeholder=" Telephone"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="town"
+      formControlName="town"
+      placeholder=" Ville"
+    >
+  </div>
+  <br>
+</form>
+
+</div>
+  <div class="modal-footer">
+  <a href="" class="btn btn-primary" style="margin:auto;display:block">C'est parti !</a>
+  </div>
+
+</ng-template>
+
+</div>
+
+<div class="container">
+
+<ng-template #popupform2>
+  <div class="modal-header" class="text-center">
+  Se Connecter
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+    <div class="modal-body">
+
+<form [formGroup]='userForm' style="margin:auto; display:block; text-align:center">
+  <div class="formGroup">
+    <input
+      type="text"
+      id="email"
+      formControlName="email"
+      placeholder=" Email"
+    >
+  </div>
+  <br>
+  <div class="formGroup">
+    <input
+      type="text"
+      id="password"
+      formControlName="password"
+      placeholder=" Mot de passe"
+    >
+  </div>
+
+  <br>
+</form>
+
+</div>
+  <div class="modal-footer">
+  <a href="" class="btn btn-primary" style="margin:auto;display:block">Let's go !</a>
+  </div>
+
+</ng-template>
+
+</div>
+
+<!--
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+<lottie-player
+    src="https://assets8.lottiefiles.com/packages/lf20_9Jtvw4.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay >
+</lottie-player>
 -->
